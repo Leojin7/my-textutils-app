@@ -34,6 +34,10 @@ const TextForm = (props) => {
     setText('');  // Clear the text area 
   }
 
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/).join(' ');
+    setText(newText);
+  }
 
   return (
     <div>
@@ -53,7 +57,7 @@ const TextForm = (props) => {
         <h1>Your Text Summary</h1>
         <p>{text.split(' ').length} words and {text.length} characters</p>
         <p>{0.008 * text.split(' ').length} Minutes to read</p>
-        <h1>Preview</h1>
+
 
       </div>
 
@@ -62,6 +66,8 @@ const TextForm = (props) => {
       <button className="btn btn-info mx-2" onClick={handleCopy}>Copy Text</button>
       <button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
       <button className="btn btn-secondary mx-2" onClick={handleClear}>Clear</button>
+      <button className="btn btn-dark mx-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+
 
 
     </div>
