@@ -7,9 +7,6 @@ const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
 const JWT_SECRET = 'devisagoodboy';
 
-
-
-
 // Signup route
 router.post(
   '/createuser',
@@ -100,3 +97,4 @@ router.post('/getuser', fetchuser, async (req, res) => {
 });
 
 module.exports = router;
+
