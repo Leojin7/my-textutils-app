@@ -1,0 +1,110 @@
+/* Reset some defaults */
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.header nav a {
+  margin-left: 20px;
+  color: #5f6368;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 272px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 10px 15px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.search-box:focus-within {
+  box-shadow: 0 4px 6px rgb(32 33 36 / 0.28);
+  border-color: rgba(223,225,229,0);
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #4285f4;
+  margin-left: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-size: 14px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #f1f3f4;
+  border-color: #c6c6c6;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #70757a;
+  border-top: 1px solid #e4e4e4;
+}
